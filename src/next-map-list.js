@@ -22,7 +22,7 @@
       serialize: function() {
         return this.items;
       },
-      setItem: function(inIndex, InItem) {
+      setItem: function(inIndex, inItem) {
         this.items[inIndex] = inItem;
       },
       getItem: function(inIndex) {
