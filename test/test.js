@@ -12,7 +12,7 @@ function genData() {
   return result;
 }
 
-test('test: init', () => {
+test('test: init/add/delete/clear', () => {
   var data = genData();
   // console.log(data);
   // const mpList = new MapList(data, idHandler)
@@ -35,6 +35,8 @@ test('test: init', () => {
   };
 
   mpList.add(item);
-
-  console.log(mpList);
+  expect(mpList.length).toBe(11);
+  mpList.delete(10);
+  expect(mpList.length).toBe(10);
+  expect(mpList.has('xxx')).toBe(false);
 });

@@ -7,7 +7,7 @@
     properties: {
       length: {
         get: function() {
-          return this.data.length;
+          return this.items.length;
         }
       }
     },
@@ -15,6 +15,7 @@
       init: function(inItems, inId) {
         this.id = inId;
         this.items = inItems;
+        this.map = this._genMap();
       },
       getId: function(inItem) {
         return typeof this.id === 'function' ? this.id(inItem) : inItem[this.id];
@@ -42,7 +43,7 @@
         }
       },
       delete: function(inIndex) {
-        var key = this.getId(inItem);
+        var key = this.getId(this.items[inIndex]);
         if (this.has(key)) {
           this.items.splice(inIndex, 1);
           delete this.map[key];
@@ -64,7 +65,8 @@
         return nxMapMap(
           this.items,
           function(_, item) {
-            result[this.getId(item)] = item;
+            console.log(item);
+            return { key: this.getId(item), value: item };
           },
           this
         );

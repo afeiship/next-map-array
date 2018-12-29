@@ -64,7 +64,7 @@
         return nxMapMap(
           this.items,
           function(_, item) {
-            result[this.getId(item)] = item;
+            return { key: this.getId(item), value: item };
           },
           this
         );
