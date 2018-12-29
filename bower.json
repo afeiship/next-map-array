@@ -1,0 +1,21 @@
+{
+  "name": "next-map-list",
+  "version": "1.0.0",
+  "description": "Map list data structure for next",
+  "main": "dist/next-map-list.js",
+  "authors": ["afei"],
+  "license": "MIT",
+  "keywords": ["next"],
+  "homepage": "https://github.com/afeiship/next-map-list",
+  "moduleType": ["amd"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "build",
+    "gulpfile.js"
+  ]
+}
