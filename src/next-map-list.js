@@ -1,6 +1,7 @@
 (function() {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
+  var nxMapMap = nx.nxMapMap || require('next-map-map');
 
   var NxMapList = nx.declare('nx.MapList', {
     properties: {
@@ -14,10 +15,9 @@
       init: function(inItems, inId) {
         this.id = inId;
         this.items = inItems;
-        this.map = this._genMap();
       },
-      id: function(inItem) {
-        return typeof this.id === FUNC ? this.id(inItem) : inItem[this.id];
+      getId: function(inItem) {
+        return typeof this.id === 'function' ? this.id(inItem) : inItem[this.id];
       },
       serialize: function() {
         return this.items;
@@ -35,14 +35,14 @@
         return this.map[inKey];
       },
       add: function(inItem) {
-        var key = this.id(inItem);
+        var key = this.getId(inItem);
         if (!this.has(key)) {
           this.items.push(inItem);
           this.map[key] = inItem;
         }
       },
       delete: function(inIndex) {
-        var key = this.id(inItem);
+        var key = this.getId(inItem);
         if (this.has(key)) {
           this.items.splice(inIndex, 1);
           delete this.map[key];
@@ -61,15 +61,13 @@
         return this.items.indexOf(inItem);
       },
       _genMap: function() {
-        var result = {};
-        nx.each(
+        return nxMapMap(
           this.items,
-          function(item) {
-            result[this.id(item)] = item;
+          function(_, item) {
+            result[this.getId(item)] = item;
           },
           this
         );
-        return result;
       }
     }
   });

@@ -12,9 +12,9 @@ function genData() {
   return result;
 }
 
-test('test', () => {
+test('test: init', () => {
   var data = genData();
-  console.log(data);
+  // console.log(data);
   // const mpList = new MapList(data, idHandler)
   // 获取数组第几项：mpList.getItem(0)
   // 设置数组第几项：mpList.setItem(0, newItem)
@@ -27,4 +27,14 @@ test('test', () => {
   // indexOf(传具体的 item 进来)
 
   // get length: 获取 size
+
+  var mpList = new NxMapList(data, 'sid');
+  var item = {
+    sid: 'xxx',
+    value: 'test'
+  };
+
+  mpList.add(item);
+
+  console.log(mpList);
 });
