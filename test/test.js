@@ -35,8 +35,8 @@ test('test: init/add/delete/clear', () => {
   };
 
   mpList.add(item);
-  expect(mpList.length).toBe(11);
+  expect(mpList.size).toBe(11);
   mpList.delete(10);
-  expect(mpList.length).toBe(10);
+  expect(mpList.size).toBe(10);
   expect(mpList.has('xxx')).toBe(false);
 });

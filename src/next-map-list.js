@@ -5,7 +5,7 @@
 
   var NxMapList = nx.declare('nx.MapList', {
     properties: {
-      length: {
+      size: {
         get: function() {
           return this.items.length;
         }
@@ -64,9 +64,8 @@
       _genMap: function() {
         return nxMapMap(
           this.items,
-          function(_, item) {
-            console.log(item);
-            return { key: this.getId(item), value: item };
+          function(_, value) {
+            return { key: this.getId(value), value: value };
           },
           this
         );
