@@ -1,8 +1,8 @@
 {
-  "name": "next-map-list",
+  "name": "next-map-array",
   "version": "1.0.0",
-  "description": "Map list data structure for next",
-  "homepage": "https://github.com/afeiship/next-map-list",
+  "description": "Map array data structure for next",
+  "homepage": "https://github.com/afeiship/next-map-array",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
@@ -12,7 +12,7 @@
     "test": "jest",
     "version": "gulp bump"
   },
-  "main": "dist/next-map-list.js",
+  "main": "dist/next-map-array.js",
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.1",

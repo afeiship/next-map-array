@@ -1,8 +1,10 @@
-# next-map-list
-> Map list data structure for next
+# next-map-array
 
+> Map array data structure for next
 
-## resources:
+## usage:
 
-## todos:
-- [ ] unit test case
+```js
+import NxMapArray from 'next-map-array';
+const mpArray = new NxMapArray();
+```

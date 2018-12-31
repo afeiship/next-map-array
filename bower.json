@@ -1,12 +1,12 @@
 {
-  "name": "next-map-list",
+  "name": "next-map-array",
   "version": "1.0.0",
-  "description": "Map list data structure for next",
-  "main": "dist/next-map-list.js",
+  "description": "Map array data structure for next",
+  "main": "dist/next-map-array.js",
   "authors": ["afei"],
   "license": "MIT",
   "keywords": ["next"],
-  "homepage": "https://github.com/afeiship/next-map-list",
+  "homepage": "https://github.com/afeiship/next-map-array",
   "moduleType": ["amd"],
   "ignore": [
     "**/.*",

@@ -1,5 +1,5 @@
 var nx = require('next-js-core2');
-var NxMapList = require('../src/next-map-list');
+var NxMapArray = require('../src/next-map-array');
 
 function genData() {
   var result = [];
@@ -28,7 +28,7 @@ test('test: init/add/delete/clear', () => {
 
   // get length: 获取 size
 
-  var mpList = new NxMapList(data, 'sid');
+  var mpList = new NxMapArray(data, 'sid');
   var item = {
     sid: 'xxx',
     value: 'test'

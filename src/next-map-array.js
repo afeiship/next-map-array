@@ -3,7 +3,7 @@
   var nx = global.nx || require('next-js-core2');
   var nxMapMap = nx.nxMapMap || require('next-map-map');
 
-  var NxMapList = nx.declare('nx.MapList', {
+  var NxMapArray = nx.declare('nx.MapArray', {
     properties: {
       size: {
         get: function() {
@@ -74,6 +74,6 @@
   });
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = NxMapList;
+    module.exports = NxMapArray;
   }
 })();
